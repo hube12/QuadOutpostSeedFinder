@@ -89,7 +89,7 @@ int main(int argc, char *argv[]) {
                 if (!testOutpost(&qhpos[3], base, &g)) continue;
 
                 for (int k = 0; k < 4; ++k) {
-                    printf("x: %d z: %d struct seed: %ld\n", qhpos[k].x/16/32, qhpos[k].z/16/32,base);
+                    printf("x: %d z: %d struct seed: %lld\n", qhpos[k].x/16/32, qhpos[k].z/16/32,base);
                 }
                 for (uint64_t j = 0; j < 0x10000; j++) {
                     int64_t seed = base + (j << 48u);
@@ -100,10 +100,10 @@ int main(int argc, char *argv[]) {
                     if (!isViableFeaturePos(Outpost, g, NULL, qhpos[2].x, qhpos[2].z)) continue;
                     if (!isViableFeaturePos(Outpost, g, NULL, qhpos[3].x, qhpos[3].z)) continue;
 
-                    fprintf(file, "%ld\n", seed);
-                    printf("%ld\n", seed);
+                    fprintf(file, "%lld\n", seed);
+                    printf("%lld\n", seed);
                     if (!(hits % 1000)) {
-                        printf("%ld quad outpost hits \n", hits);
+                        printf("%lld quad outpost hits \n", hits);
                     }
                     hits++;
                 }

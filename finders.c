@@ -1174,10 +1174,6 @@ Pos getSpawn(const int mcversion, LayerStack *g, int *cache, int64_t worldSeed, 
         spawn.x = spawn.z = 0;
     }
 
-    int maxX = 0;
-    int minX = 0;
-    int maxZ = 0;
-    int minZ = 0;
     if (mcversion >= MC_1_13) {
         // TODO: The 1.13 section may need further checking!
         int n2 = 0;
